@@ -34,11 +34,12 @@ class Translasi extends StatelessWidget {
             )),
             child: Row(
               children: [
-                Container(
+                Flexible(
+                  flex: 2,
                   child: Column(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 20.0),
+                        alignment: Alignment.center,
                         child: Image(
                           image: AssetImage("assets/button/translasi.png"),
                           width: 120,
@@ -46,7 +47,7 @@ class Translasi extends StatelessWidget {
                         ),
                       ),
                       Container(
-                          margin: const EdgeInsets.only(top: 0.0, left: 5.0),
+                          alignment: Alignment.center,
                           child: Row(
                             children: [
                               Container(
@@ -87,14 +88,21 @@ class Translasi extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 80.0),
-                  child: Image(
-                    image: AssetImage("assets/images/translasi1.png"),
-                    width: 280,
-                    height: 300,
-                  ),
-                )
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/translasi1.png"),
+                          width: 270,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),

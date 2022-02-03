@@ -29,18 +29,14 @@ class Refleksi2 extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
                 Container(
                     child: Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 0.0, left: 10.0),
+                      alignment: Alignment.center,
                       child: Image(
                         image: AssetImage("assets/button/refleksi.png"),
                         width: 120,
@@ -48,7 +44,7 @@ class Refleksi2 extends StatelessWidget {
                       ),
                     ),
                     Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 5.0),
+                        alignment: Alignment.center,
                         child: Row(
                           children: [
                             Container(
@@ -87,7 +83,7 @@ class Refleksi2 extends StatelessWidget {
                           ],
                         )),
                     Container(
-                      margin: const EdgeInsets.only(bottom: 10.0),
+                      alignment: Alignment.center,
                       child: SizedBox(
                         width: 150,
                         child: FloatingActionButton.extended(
@@ -110,7 +106,8 @@ class Refleksi2 extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(bottom: 10.0),
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 10.0),
                       child: FloatingActionButton.extended(
                         onPressed: () {
                           Navigator.of(context)
@@ -131,20 +128,21 @@ class Refleksi2 extends StatelessWidget {
                     ),
                   ],
                 )),
-                Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 10.0, left: 80.0),
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
                         child: Image(
                           image: AssetImage("assets/images/refleksi2.png"),
                           width: 270,
-                          height: 250,
                         ),
                       ),
-                    ],
-                  ),
-                ),
+                    ))
               ],
             ),
           )),

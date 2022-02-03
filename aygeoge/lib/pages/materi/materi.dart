@@ -31,19 +31,16 @@ class MateriScreen extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[400],
             child: Row(
               children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 10.0, left: 35.0),
+                Flexible(
+                    flex: 1,
                     child: Column(
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(bottom: 5.0),
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 10.0, bottom: 5),
                           child: SizedBox(
                             width: 100,
                             child: FloatingActionButton.extended(
@@ -164,13 +161,21 @@ class MateriScreen extends StatelessWidget {
                         ),
                       ],
                     )),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 95.0),
-                  child: Image(
-                    image: AssetImage("assets/images/materitext.png"),
-                    width: 300,
-                  ),
-                )
+                Flexible(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/materitext.png"),
+                          width: 300,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),

@@ -27,81 +27,87 @@ class Latihan6 extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
-                Container(
+                Flexible(
+                    flex: 2,
                     child: Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(top: 0.0, left: 20.0),
-                      child: Image(
-                        image: AssetImage("assets/button/latihan.png"),
-                        width: 120,
-                        height: 100,
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Image(
+                            image: AssetImage("assets/button/latihan.png"),
+                            width: 120,
+                            height: 100,
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Image(
+                            image: AssetImage("assets/images/latihan.png"),
+                            width: 120,
+                            height: 100,
+                          ),
+                        ),
+                        Container(
+                            alignment: Alignment.center,
+                            child: Row(
+                              children: [
+                                Container(
+                                    margin: const EdgeInsets.only(
+                                        bottom: 0.0, left: 5.0),
+                                    child: ElevatedButton.icon(
+                                      label: Text('Back',
+                                          style: TextStyle(fontSize: 12)),
+                                      icon: ImageIcon(
+                                          AssetImage("assets/button/back.png"),
+                                          size: 10),
+                                      onPressed: () {
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return Latihan5();
+                                        }));
+                                      },
+                                    )),
+                                Container(
+                                    margin: const EdgeInsets.only(
+                                        bottom: 0.0, left: 5.0),
+                                    child: ElevatedButton.icon(
+                                      icon: ImageIcon(
+                                        AssetImage("assets/button/next.png"),
+                                        size: 10,
+                                      ),
+                                      label: Text('Next',
+                                          style: TextStyle(fontSize: 12)),
+                                      onPressed: () {
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return Latihan7();
+                                        }));
+                                      },
+                                    )),
+                              ],
+                            )),
+                      ],
+                    )),
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/latihan6.png"),
+                          width: 250,
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 20.0, left: 20.0),
-                      child: Image(
-                        image: AssetImage("assets/images/latihan.png"),
-                        width: 120,
-                        height: 100,
-                      ),
-                    ),
-                    Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 5.0),
-                        child: Row(
-                          children: [
-                            Container(
-                                margin: const EdgeInsets.only(
-                                    bottom: 0.0, left: 5.0),
-                                child: ElevatedButton.icon(
-                                  label: Text('Back',
-                                      style: TextStyle(fontSize: 12)),
-                                  icon: ImageIcon(
-                                      AssetImage("assets/button/back.png"),
-                                      size: 10),
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(builder: (context) {
-                                      return Latihan5();
-                                    }));
-                                  },
-                                )),
-                            Container(
-                                margin: const EdgeInsets.only(
-                                    bottom: 0.0, left: 5.0),
-                                child: ElevatedButton.icon(
-                                  icon: ImageIcon(
-                                    AssetImage("assets/button/next.png"),
-                                    size: 10,
-                                  ),
-                                  label: Text('Next',
-                                      style: TextStyle(fontSize: 12)),
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(builder: (context) {
-                                      return Latihan7();
-                                    }));
-                                  },
-                                )),
-                          ],
-                        )),
-                  ],
-                )),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 80.0),
-                  child: Image(
-                    image: AssetImage("assets/images/latihan6.png"),
-                    width: 280,
-                    height: 300,
-                  ),
-                )
+                    ))
               ],
             ),
           )),

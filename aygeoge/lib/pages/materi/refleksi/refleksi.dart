@@ -27,18 +27,15 @@ class Refleksi extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
-                Container(
+                Flexible(
+                  flex: 2,
                   child: Column(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 10.0),
+                        alignment: Alignment.center,
                         child: Image(
                           image: AssetImage("assets/button/refleksi.png"),
                           width: 120,
@@ -46,7 +43,7 @@ class Refleksi extends StatelessWidget {
                         ),
                       ),
                       Container(
-                          margin: const EdgeInsets.only(top: 20.0, left: 5.0),
+                          alignment: Alignment.center,
                           child: Row(
                             children: [
                               Container(
@@ -87,14 +84,21 @@ class Refleksi extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 90.0),
-                  child: Image(
-                    image: AssetImage("assets/images/refleksi1.png"),
-                    width: 260,
-                    height: 300,
-                  ),
-                )
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/refleksi1.png"),
+                          width: 270,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),

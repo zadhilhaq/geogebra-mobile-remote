@@ -26,18 +26,15 @@ class KompetensiInti extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[400],
             child: Row(
               children: [
-                Container(
+                Flexible(
+                  flex: 1,
                   child: Column(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 20.0),
+                        alignment: Alignment.center,
                         child: Image(
                           image: AssetImage("assets/button/inti.png"),
                           width: 120,
@@ -45,7 +42,7 @@ class KompetensiInti extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.only(bottom: 10.0, left: 20.0),
+                        alignment: Alignment.center,
                         child: Image(
                           image: AssetImage("assets/images/buku.png"),
                           width: 120,
@@ -53,8 +50,7 @@ class KompetensiInti extends StatelessWidget {
                         ),
                       ),
                       Container(
-                          margin:
-                              const EdgeInsets.only(bottom: 10.0, left: 10.0),
+                          alignment: Alignment.center,
                           child: ElevatedButton.icon(
                             icon: ImageIcon(
                               AssetImage("assets/button/next.png"),
@@ -71,14 +67,21 @@ class KompetensiInti extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10.0, left: 80.0),
-                  child: Image(
-                    image: AssetImage("assets/images/kompetensiinti.png"),
-                    width: 320,
-                    height: 350,
-                  ),
-                )
+                Flexible(
+                    flex: 3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/kompetensiinti.png"),
+                          width: 300,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),

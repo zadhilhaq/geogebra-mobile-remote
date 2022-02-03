@@ -27,18 +27,15 @@ class Komposisi extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey,
             child: Row(
               children: [
-                Container(
+                Flexible(
+                  flex: 2,
                   child: Column(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 0.0),
+                        alignment: Alignment.center,
                         child: Image(
                           image: AssetImage("assets/button/komposisi.png"),
                           width: 120,
@@ -46,7 +43,7 @@ class Komposisi extends StatelessWidget {
                         ),
                       ),
                       Container(
-                          margin: const EdgeInsets.only(top: 20.0, left: 0.0),
+                          alignment: Alignment.center,
                           child: Row(
                             children: [
                               Container(
@@ -87,14 +84,21 @@ class Komposisi extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 70.0),
-                  child: Image(
-                    image: AssetImage("assets/images/komposisi1.png"),
-                    width: 300,
-                    height: 300,
-                  ),
-                )
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/komposisi1.png"),
+                          width: 270,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),

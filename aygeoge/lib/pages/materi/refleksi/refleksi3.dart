@@ -27,18 +27,14 @@ class Refleksi3 extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
-                Container(
+                Flexible(
                     child: Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 0.0, left: 20.0),
+                      alignment: Alignment.center,
                       child: Image(
                         image: AssetImage("assets/button/refleksi.png"),
                         width: 120,
@@ -46,29 +42,22 @@ class Refleksi3 extends StatelessWidget {
                       ),
                     ),
                     Container(
-                        margin: const EdgeInsets.only(top: 0.0, left: 5.0),
-                        child: Row(
-                          children: [
-                            Container(
-                                margin: const EdgeInsets.only(
-                                    bottom: 10.0, left: 10.0),
-                                child: ElevatedButton.icon(
-                                  label: Text('Back',
-                                      style: TextStyle(fontSize: 12)),
-                                  icon: ImageIcon(
-                                      AssetImage("assets/button/back.png"),
-                                      size: 10),
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(builder: (context) {
-                                      return Refleksi2();
-                                    }));
-                                  },
-                                )),
-                          ],
-                        )),
+                      alignment: Alignment.center,
+                      child: ElevatedButton.icon(
+                        label: Text('Back', style: TextStyle(fontSize: 12)),
+                        icon: ImageIcon(AssetImage("assets/button/back.png"),
+                            size: 10),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Refleksi2();
+                          }));
+                        },
+                      ),
+                    ),
                     Container(
-                      margin: const EdgeInsets.only(bottom: 10.0, left: 10.0),
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 10.0),
                       child: FloatingActionButton.extended(
                         onPressed: () {
                           Navigator.of(context)
@@ -89,14 +78,21 @@ class Refleksi3 extends StatelessWidget {
                     ),
                   ],
                 )),
-                Container(
-                  margin: const EdgeInsets.only(top: 0.0, left: 70.0),
-                  child: Image(
-                    image: AssetImage("assets/images/refleksi3.png"),
-                    width: 350,
-                    height: 300,
-                  ),
-                )
+                Flexible(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/materi2.png"),
+                        fit: BoxFit.fill,
+                      )),
+                      child: Center(
+                        child: Image(
+                          image: AssetImage("assets/images/refleksi3.png"),
+                          width: 270,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )),
