@@ -1,4 +1,3 @@
-import 'package:aygeoge/pages/latihan/latihan5.dart';
 import 'package:aygeoge/pages/latihan/latihan6.dart';
 import 'package:aygeoge/pages/menu/view/menu.dart';
 import 'package:flutter/material.dart';

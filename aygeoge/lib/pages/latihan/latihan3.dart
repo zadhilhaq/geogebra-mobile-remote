@@ -55,9 +55,9 @@ class Latihan3 extends StatelessWidget {
                             alignment: Alignment.center,
                             child: Row(
                               children: [
-                                Container(
-                                    margin: const EdgeInsets.only(
-                                        bottom: 0.0, left: 5.0),
+                                Flexible(flex: 1, child: Container()),
+                                Align(
+                                    alignment: Alignment.centerLeft,
                                     child: ElevatedButton.icon(
                                       label: Text('Back',
                                           style: TextStyle(fontSize: 12)),
@@ -72,9 +72,9 @@ class Latihan3 extends StatelessWidget {
                                         }));
                                       },
                                     )),
-                                Container(
-                                    margin: const EdgeInsets.only(
-                                        bottom: 0.0, left: 5.0),
+                                Flexible(flex: 2, child: Container()),
+                                Align(
+                                    alignment: Alignment.centerRight,
                                     child: ElevatedButton.icon(
                                       icon: ImageIcon(
                                         AssetImage("assets/button/next.png"),
@@ -90,6 +90,7 @@ class Latihan3 extends StatelessWidget {
                                         }));
                                       },
                                     )),
+                                Flexible(flex: 1, child: Container()),
                               ],
                             )),
                       ],

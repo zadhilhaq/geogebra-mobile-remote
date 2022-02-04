@@ -91,7 +91,7 @@ class Komposisi2 extends StatelessWidget {
                       child: Center(
                         child: Image(
                           image: AssetImage("assets/images/komposisi2.png"),
-                          width: 270,
+                          width: 325,
                         ),
                       ),
                     ))

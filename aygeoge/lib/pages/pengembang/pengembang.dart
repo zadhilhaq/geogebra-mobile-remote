@@ -25,11 +25,11 @@ class Pengembang extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            color: Colors.grey[400],
+            color: Colors.grey[300],
             child: Row(
               children: [
                 Flexible(
-                  flex: 1,
+                  flex: 2,
                   child: Column(
                     children: [
                       Container(
@@ -52,7 +52,7 @@ class Pengembang extends StatelessWidget {
                   ),
                 ),
                 Flexible(
-                    flex: 3,
+                    flex: 5,
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -62,7 +62,7 @@ class Pengembang extends StatelessWidget {
                       child: Center(
                         child: Image(
                           image: AssetImage("assets/images/pengembang.png"),
-                          width: 300,
+                          width: 280,
                         ),
                       ),
                     ))

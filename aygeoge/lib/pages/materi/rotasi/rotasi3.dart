@@ -2,9 +2,13 @@ import 'package:aygeoge/pages/materi/materi.dart';
 import 'package:aygeoge/pages/materi/rotasi/rotasi2.dart';
 import 'package:aygeoge/pages/menu/view/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Rotasi3 extends StatelessWidget {
   @override
+  void _launchURL(String _url) async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
@@ -27,11 +31,7 @@ class Rotasi3 extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
                 Flexible(
@@ -86,18 +86,35 @@ class Rotasi3 extends StatelessWidget {
                 Flexible(
                     flex: 5,
                     child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                        image: AssetImage("assets/images/materi2.png"),
-                        fit: BoxFit.fill,
-                      )),
-                      child: Center(
-                        child: Image(
-                          image: AssetImage("assets/images/rotasi3.png"),
-                          width: 270,
-                        ),
-                      ),
-                    ))
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage("assets/images/materi2.png"),
+                          fit: BoxFit.fill,
+                        )),
+                        child: Column(
+                          children: [
+                            Center(
+                              child: Image(
+                                image: AssetImage("assets/images/rotasi3.png"),
+                                width: 300,
+                              ),
+                            ),
+                            Center(
+                              child: TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.only(
+                                      left: 70, right: 50),
+                                  primary: Colors.lightBlue,
+                                  textStyle: const TextStyle(fontSize: 14),
+                                ),
+                                onPressed: () => _launchURL(
+                                    'https://drive.google.com/file/d/1zLMMl1MBJa6hwhUYjYnGkzuWQDdph_Lq/view?usp=sharing'),
+                                child: const Text(
+                                    'https://drive.google.com/file/d/1zLMMl1MBJa6hwhUYjYnGkzuWQDdph_Lq/view?usp=sharing'),
+                              ),
+                            )
+                          ],
+                        )))
               ],
             ),
           )),

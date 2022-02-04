@@ -29,7 +29,7 @@ class Konsep extends StatelessWidget {
             child: Row(
               children: [
                 Flexible(
-                  flex: 1,
+                  flex: 2,
                   child: Column(
                     children: [
                       Container(
@@ -52,7 +52,7 @@ class Konsep extends StatelessWidget {
                   ),
                 ),
                 Flexible(
-                    flex: 3,
+                    flex: 5,
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(

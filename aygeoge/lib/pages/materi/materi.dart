@@ -31,11 +31,11 @@ class MateriScreen extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            color: Colors.grey[400],
+            color: Colors.grey[300],
             child: Row(
               children: [
                 Flexible(
-                    flex: 1,
+                    flex: 2,
                     child: Column(
                       children: [
                         Container(
@@ -162,7 +162,7 @@ class MateriScreen extends StatelessWidget {
                       ],
                     )),
                 Flexible(
-                    flex: 3,
+                    flex: 5,
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(

@@ -48,9 +48,9 @@ class Dilatasi2 extends StatelessWidget {
                             alignment: Alignment.center,
                             child: Row(
                               children: [
-                                Container(
-                                    margin: const EdgeInsets.only(
-                                        bottom: 10.0, left: 5.0),
+                                Flexible(flex: 1, child: Container()),
+                                Align(
+                                    alignment: Alignment.centerLeft,
                                     child: ElevatedButton.icon(
                                       label: Text('Back',
                                           style: TextStyle(fontSize: 12)),
@@ -65,9 +65,9 @@ class Dilatasi2 extends StatelessWidget {
                                         }));
                                       },
                                     )),
-                                Container(
-                                    margin: const EdgeInsets.only(
-                                        bottom: 10.0, left: 5.0),
+                                Flexible(flex: 2, child: Container()),
+                                Align(
+                                    alignment: Alignment.centerRight,
                                     child: ElevatedButton.icon(
                                       icon: ImageIcon(
                                         AssetImage("assets/button/next.png"),
@@ -83,6 +83,7 @@ class Dilatasi2 extends StatelessWidget {
                                         }));
                                       },
                                     )),
+                                Flexible(flex: 1, child: Container()),
                               ],
                             )),
                         Container(
@@ -141,7 +142,7 @@ class Dilatasi2 extends StatelessWidget {
                       child: Center(
                         child: Image(
                           image: AssetImage("assets/images/dilatasi2.png"),
-                          width: 270,
+                          width: 310,
                         ),
                       ),
                     ))

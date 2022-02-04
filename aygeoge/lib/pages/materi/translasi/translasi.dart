@@ -27,11 +27,7 @@ class Translasi extends StatelessWidget {
           ),
           body: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/materi.png"),
-              fit: BoxFit.fill,
-            )),
+            color: Colors.grey[300],
             child: Row(
               children: [
                 Flexible(
@@ -50,9 +46,9 @@ class Translasi extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Row(
                             children: [
-                              Container(
-                                  margin: const EdgeInsets.only(
-                                      bottom: 10.0, left: 5.0),
+                              Flexible(flex: 1, child: Container()),
+                              Align(
+                                  alignment: Alignment.centerLeft,
                                   child: ElevatedButton.icon(
                                     label: Text('Back',
                                         style: TextStyle(fontSize: 12)),
@@ -66,9 +62,9 @@ class Translasi extends StatelessWidget {
                                       }));
                                     },
                                   )),
-                              Container(
-                                  margin: const EdgeInsets.only(
-                                      bottom: 10.0, left: 5.0),
+                              Flexible(flex: 2, child: Container()),
+                              Align(
+                                  alignment: Alignment.centerRight,
                                   child: ElevatedButton.icon(
                                     icon: ImageIcon(
                                       AssetImage("assets/button/next.png"),
@@ -83,6 +79,7 @@ class Translasi extends StatelessWidget {
                                       }));
                                     },
                                   )),
+                              Flexible(flex: 1, child: Container()),
                             ],
                           )),
                     ],
@@ -99,7 +96,7 @@ class Translasi extends StatelessWidget {
                       child: Center(
                         child: Image(
                           image: AssetImage("assets/images/translasi1.png"),
-                          width: 270,
+                          width: 330,
                         ),
                       ),
                     ))
